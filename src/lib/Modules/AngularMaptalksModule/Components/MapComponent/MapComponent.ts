@@ -1,8 +1,15 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "MapComponent",
   templateUrl: "./MapComponent.html",
   styleUrls: ["./MapComponent.css"],
 })
-export class MapComponent {}
+/*Основной компонент карты */
+export class MapComponent implements OnInit {
+  /*Инициализация карты */
+  InitMap() {}
+  ngOnInit(): void {
+    this.InitMap();
+  }
+}

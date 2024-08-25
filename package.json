@@ -6,6 +6,7 @@
     "@angular/core": "^16.2.0"
   },
   "dependencies": {
+    "maptalks": "^1.0.0-rc.37",
     "tslib": "^2.3.0"
   },
   "sideEffects": false
