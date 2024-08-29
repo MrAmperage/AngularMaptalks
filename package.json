@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "maptalks": "^1.0.0-rc.37",
-    "tslib": "^2.3.0"
+    "tslib": "^2.7.0"
   },
   "sideEffects": false
 }
