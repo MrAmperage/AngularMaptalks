@@ -1,10 +1,7 @@
 import { Component, Input } from "@angular/core";
 import BaseLayerComponent from "../BaseLayerComponent/BaseLayerComponent";
 import { TileLayer } from "maptalks";
-import {
-  MapComponent,
-  MapService,
-} from "projects/angular-maptalks/src/public-api";
+import { MapService } from "../../../../../public-api";
 
 @Component({
   selector: "TileLayerComponent",

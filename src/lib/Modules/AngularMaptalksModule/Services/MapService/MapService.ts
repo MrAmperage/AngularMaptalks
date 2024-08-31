@@ -1,9 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Coordinate, Map } from "maptalks";
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable()
 /*Сервис карты.Все настройки можно задавать отсюда*/
 export default class MapService {
   //TODO Потом удалить и обращаться к MapObject из родительского MapComponent

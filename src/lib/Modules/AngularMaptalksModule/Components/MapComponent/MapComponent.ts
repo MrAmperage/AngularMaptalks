@@ -1,20 +1,14 @@
-import {
-  Component,
-  ElementRef,
-  Injectable,
-  Input,
-  OnInit,
-  ViewChild,
-} from "@angular/core";
+import { Component, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
 import { Map, Coordinate } from "maptalks";
-import { MapService } from "projects/angular-maptalks/src/public-api";
+import { MapService } from "../../../../../public-api";
 
 @Component({
   selector: "MapComponent",
   templateUrl: "./MapComponent.html",
   styleUrls: ["./MapComponent.css"],
+  providers: [MapService],
 })
-@Injectable({ providedIn: "root" })
+
 /*Основной компонент карты */
 export default class MapComponent implements OnInit {
   constructor(private MapService: MapService) {}
