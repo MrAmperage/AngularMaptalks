@@ -1,14 +1,18 @@
 import { Injectable } from "@angular/core";
-import { Coordinate } from "maptalks";
+import { Coordinate, Map } from "maptalks";
 
 @Injectable({
   providedIn: "root",
 })
 /*Сервис карты.Все настройки можно задавать отсюда*/
-export class MapService {
+export default class MapService {
+  //TODO Потом удалить и обращаться к MapObject из родительского MapComponent
+  MapObject!: Map;
   /*Центр карты */
   Center: number[] | Coordinate = [0, 0];
   /*Уровень приближения карты*/
   Zoom: number = 0;
-  constructor() {}
+  /*URL Template для базового тайлового слоя */
+  BaseTileLayerUrlTemplate: string | (() => string) =
+    "https://{s}basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
 }

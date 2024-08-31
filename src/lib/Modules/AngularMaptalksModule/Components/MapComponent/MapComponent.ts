@@ -1,4 +1,11 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  Injectable,
+  Input,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { Map, Coordinate } from "maptalks";
 import { MapService } from "projects/angular-maptalks/src/public-api";
 
@@ -7,26 +14,29 @@ import { MapService } from "projects/angular-maptalks/src/public-api";
   templateUrl: "./MapComponent.html",
   styleUrls: ["./MapComponent.css"],
 })
+@Injectable({ providedIn: "root" })
 /*Основной компонент карты */
-export class MapComponent implements OnInit {
+export default class MapComponent implements OnInit {
   constructor(private MapService: MapService) {}
   /*Уровень приближения карты*/
   @Input()
-  Zoom: number = 0;
+  private Zoom: number = 0;
   /*Контейнер карты */
   @ViewChild("MapContainer", { static: true })
   MapContainer!: ElementRef<HTMLElement>;
   /*Центр карты */
   @Input()
-  Center!: number[] | Coordinate;
+  private Center!: number[] | Coordinate;
   /*Объект карты */
   MapObject!: Map;
   /*Инициализация карты */
-  InitMap() {
+  private InitMap() {
     this.MapObject = new Map(this.MapContainer.nativeElement, {
       center: this.GetCenter,
       zoom: this.GetZoom,
     });
+
+    this.MapService.MapObject = this.MapObject;
   }
   ngOnInit(): void {
     this.InitMap();

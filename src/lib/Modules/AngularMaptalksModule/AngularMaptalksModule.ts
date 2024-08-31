@@ -1,7 +1,10 @@
 import { NgModule } from "@angular/core";
-import { MapComponent } from "./Components/MapComponent/MapComponent";
-import { MapService } from "./Services/MapService/MapService";
-import TileLayerComponent from "./Components/TileLayerComponent/TileLayerComponent";
+
+import {
+  MapComponent,
+  TileLayerComponent,
+  MapService,
+} from "./../../../public-api";
 
 @NgModule({
   declarations: [MapComponent, TileLayerComponent],
@@ -9,4 +12,4 @@ import TileLayerComponent from "./Components/TileLayerComponent/TileLayerCompone
   exports: [MapComponent, TileLayerComponent],
   providers: [MapService],
 })
-export class AngularMaptalksModule {}
+export default class AngularMaptalksModule {}
