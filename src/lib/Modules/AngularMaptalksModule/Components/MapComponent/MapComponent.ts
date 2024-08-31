@@ -1,4 +1,11 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  Injectable,
+  Input,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { Map, Coordinate } from "maptalks";
 import { MapService } from "../../../../../public-api";
 
@@ -8,8 +15,8 @@ import { MapService } from "../../../../../public-api";
   styleUrls: ["./MapComponent.css"],
   providers: [MapService],
 })
-
 /*Основной компонент карты */
+@Injectable({ providedIn: "root" })
 export default class MapComponent implements OnInit {
   constructor(private MapService: MapService) {}
   /*Уровень приближения карты*/
@@ -29,8 +36,6 @@ export default class MapComponent implements OnInit {
       center: this.GetCenter,
       zoom: this.GetZoom,
     });
-
-    this.MapService.MapObject = this.MapObject;
   }
   ngOnInit(): void {
     this.InitMap();

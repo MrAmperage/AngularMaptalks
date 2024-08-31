@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { Layer } from "maptalks";
+import MapComponent from "../MapComponent/MapComponent";
 
 @Component({
   selector: "BaseLayerComponent",
@@ -10,7 +11,7 @@ import { Layer } from "maptalks";
 export default abstract class BaseLayerComponent<LayerClass extends Layer>
   implements OnInit
 {
-  constructor() {}
+  constructor(private MapComponentInstance: MapComponent) {}
   LayerObject!: LayerClass;
   @Input()
   Id!: string;
@@ -22,9 +23,10 @@ export default abstract class BaseLayerComponent<LayerClass extends Layer>
   ForceRenderOnZooming: boolean = false;
   @Input()
   ForceRenderOnRotating: boolean = false;
-  abstract InitLayer(): void;
+  abstract CallbackInitLayer(): void;
 
   ngOnInit(): void {
-    this.InitLayer();
+    this.CallbackInitLayer();
+    this.MapComponentInstance.MapObject.addLayer(this.LayerObject);
   }
 }

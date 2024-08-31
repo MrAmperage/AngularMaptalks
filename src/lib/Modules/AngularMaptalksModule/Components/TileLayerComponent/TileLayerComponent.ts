@@ -1,7 +1,7 @@
 import { Component, Input } from "@angular/core";
 import BaseLayerComponent from "../BaseLayerComponent/BaseLayerComponent";
 import { TileLayer } from "maptalks";
-import { MapService } from "../../../../../public-api";
+import { MapComponent, MapService } from "../../../../../public-api";
 
 @Component({
   selector: "TileLayerComponent",
@@ -13,10 +13,13 @@ export default class TileLayerComponent extends BaseLayerComponent<TileLayer> {
   UrlTemplate!: string | (() => string);
   @Input()
   TileSize: [number, number] = [256, 256];
-  constructor(private MapService: MapService) {
-    super();
+  constructor(
+    private MapService: MapService,
+    private MapComponent: MapComponent
+  ) {
+    super(MapComponent);
   }
-  override InitLayer(): void {
+  override CallbackInitLayer(): void {
     this.LayerObject = new TileLayer(this.Id, {
       forceRenderOnMoving: this.ForceRenderOnMoving,
       forceRenderOnRotating: this.ForceRenderOnRotating,
@@ -24,8 +27,6 @@ export default class TileLayerComponent extends BaseLayerComponent<TileLayer> {
       urlTemplate: this.GetUrlTemplate,
       tileSize: this.TileSize,
     });
-
-    this.MapService.MapObject?.addLayer(this.LayerObject);
   }
   get GetUrlTemplate() {
     switch (true) {

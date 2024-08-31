@@ -6,6 +6,6 @@ import { MapComponent, TileLayerComponent } from "./../../../public-api";
   declarations: [MapComponent, TileLayerComponent],
   imports: [],
   exports: [MapComponent, TileLayerComponent],
-  providers: [],
+  providers: [MapComponent],
 })
 export default class AngularMaptalksModule {}

@@ -4,8 +4,6 @@ import { Coordinate, Map } from "maptalks";
 @Injectable()
 /*Сервис карты.Все настройки можно задавать отсюда*/
 export default class MapService {
-  //TODO Потом удалить и обращаться к MapObject из родительского MapComponent
-  MapObject!: Map;
   /*Центр карты */
   Center: number[] | Coordinate = [0, 0];
   /*Уровень приближения карты*/
