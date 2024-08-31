@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { MapComponent } from "../../../../../public-api";
 import { Layer } from "maptalks";
 
 @Component({
