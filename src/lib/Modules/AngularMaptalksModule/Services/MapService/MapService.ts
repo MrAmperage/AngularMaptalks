@@ -4,6 +4,7 @@ import { Coordinate } from "maptalks";
 @Injectable({
   providedIn: "root",
 })
+/*Сервис карты.Все настройки можно задавать отсюда*/
 export class MapService {
   /*Центр карты */
   Center: number[] | Coordinate = [0, 0];
