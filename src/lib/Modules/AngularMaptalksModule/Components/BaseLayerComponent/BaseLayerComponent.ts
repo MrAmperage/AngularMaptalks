@@ -23,10 +23,14 @@ export default abstract class BaseLayerComponent<LayerClass extends Layer>
   ForceRenderOnZooming: boolean = false;
   @Input()
   ForceRenderOnRotating: boolean = false;
-  abstract CallbackInitLayer(): void;
+  abstract PrepareLayer(): void;
+
+  InitLayer() {
+    this.PrepareLayer();
+    this.MapComponentInstance.MapObject.addLayer(this.LayerObject);
+  }
 
   ngOnInit(): void {
-    this.CallbackInitLayer();
-    this.MapComponentInstance.MapObject.addLayer(this.LayerObject);
+    this.InitLayer();
   }
 }

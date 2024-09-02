@@ -19,7 +19,7 @@ export default class TileLayerComponent extends BaseLayerComponent<TileLayer> {
   ) {
     super(MapComponent);
   }
-  override CallbackInitLayer(): void {
+  override PrepareLayer(): void {
     this.LayerObject = new TileLayer(this.Id, {
       forceRenderOnMoving: this.ForceRenderOnMoving,
       forceRenderOnRotating: this.ForceRenderOnRotating,
