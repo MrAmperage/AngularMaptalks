@@ -21,13 +21,13 @@ export default class MapComponent implements OnInit {
   constructor(private MapService: MapService) {}
   /*Уровень приближения карты*/
   @Input()
-  private Zoom: number = 0;
+  Zoom: number = 0;
   /*Контейнер карты */
   @ViewChild("MapContainer", { static: true })
   MapContainer!: ElementRef<HTMLElement>;
   /*Центр карты */
   @Input()
-  private Center!: number[] | Coordinate;
+  Center!: number[] | Coordinate;
   /*Объект карты */
   MapObject!: Map;
   /*Инициализация карты */
