@@ -4,12 +4,23 @@ import {
   MapComponent,
   TileLayerComponent,
   ThreeLayerComponent,
+  VectorLayerComponent,
 } from "./../../../public-api";
 
 @NgModule({
-  declarations: [MapComponent, TileLayerComponent, ThreeLayerComponent],
+  declarations: [
+    MapComponent,
+    TileLayerComponent,
+    ThreeLayerComponent,
+    VectorLayerComponent,
+  ],
   imports: [],
-  exports: [MapComponent, TileLayerComponent, ThreeLayerComponent],
+  exports: [
+    MapComponent,
+    TileLayerComponent,
+    ThreeLayerComponent,
+    VectorLayerComponent,
+  ],
   providers: [MapComponent],
 })
 export default class AngularMaptalksModule {}

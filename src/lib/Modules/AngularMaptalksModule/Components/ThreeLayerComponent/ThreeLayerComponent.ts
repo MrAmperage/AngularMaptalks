@@ -24,7 +24,7 @@ export default class ThreeLayerComponent implements OnInit, DoCheck {
     private MapComponentInstance: MapComponent,
     private IterableDiffer: IterableDiffers
   ) {
-    this.ModelsDiffer = this.IterableDiffer.find([]).create();
+    this.ModelsDiffer = this.IterableDiffer.find(this.Models).create();
   }
   ModelsDiffer: IterableDiffer<Model>;
 
