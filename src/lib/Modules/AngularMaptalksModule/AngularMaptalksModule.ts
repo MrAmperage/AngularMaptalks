@@ -1,12 +1,11 @@
 import { NgModule } from "@angular/core";
-
 import {
   MapComponent,
-  TileLayerComponent,
+  MapService,
   ThreeLayerComponent,
+  TileLayerComponent,
   VectorLayerComponent,
-} from "./../../../public-api";
-import { MapService } from "../../../public-api";
+} from "../../../public-api";
 
 @NgModule({
   declarations: [

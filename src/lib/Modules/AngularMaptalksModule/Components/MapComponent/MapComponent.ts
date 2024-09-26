@@ -21,7 +21,7 @@ export default class MapComponent implements OnInit {
   constructor(private MapService: MapService) {}
   /*Уровень приближения карты*/
   @Input()
-  Zoom: number = 0;
+  Zoom!: number;
   /*Контейнер карты */
   @ViewChild("MapContainer", { static: true })
   MapContainer!: ElementRef<HTMLElement>;
