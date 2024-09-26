@@ -1,6 +1,9 @@
 {
   "name": "angular-maptalks",
   "version": "0.0.1",
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  },
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
@@ -13,6 +16,7 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@types/three": "^0.168.0"
+    "@types/three": "^0.168.0",
+    "ng-packagr": "^18.2.1"
   }
 }
