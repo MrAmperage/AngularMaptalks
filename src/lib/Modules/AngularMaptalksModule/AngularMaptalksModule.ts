@@ -6,6 +6,7 @@ import {
   ThreeLayerComponent,
   VectorLayerComponent,
 } from "./../../../public-api";
+import { MapService } from "../../../public-api";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,6 @@ import {
     ThreeLayerComponent,
     VectorLayerComponent,
   ],
-  providers: [MapComponent],
+  providers: [MapService],
 })
 export default class AngularMaptalksModule {}
