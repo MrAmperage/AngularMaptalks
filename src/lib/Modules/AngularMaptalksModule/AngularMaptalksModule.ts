@@ -5,6 +5,7 @@ import {
   ThreeLayerComponent,
   TileLayerComponent,
   VectorLayerComponent,
+  WMSTileLayerComponent,
 } from "../../../public-api";
 
 @NgModule({
@@ -13,6 +14,7 @@ import {
     TileLayerComponent,
     ThreeLayerComponent,
     VectorLayerComponent,
+    WMSTileLayerComponent,
   ],
   imports: [],
   exports: [
@@ -20,6 +22,7 @@ import {
     TileLayerComponent,
     ThreeLayerComponent,
     VectorLayerComponent,
+    WMSTileLayerComponent,
   ],
   providers: [MapService],
 })

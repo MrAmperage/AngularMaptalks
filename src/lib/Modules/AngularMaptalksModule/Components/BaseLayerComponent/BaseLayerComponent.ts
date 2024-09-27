@@ -13,7 +13,7 @@ export default abstract class BaseLayerComponent<LayerClass extends Layer>
 {
   constructor(private MapComponentInstance: MapComponent) {}
   LayerObject!: LayerClass;
-  @Input()
+  @Input({ required: true })
   Id!: string;
   @Input()
   ZIndex!: number;
