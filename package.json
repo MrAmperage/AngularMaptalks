@@ -9,14 +9,14 @@
     "@angular/core": "^16.2.0"
   },
   "dependencies": {
-    "maptalks": "^1.0.0-rc.37",
+    "maptalks": "^1.0.0-rc.39",
     "maptalks.three": "^0.38.3",
-    "three": "^0.168.0",
-    "tslib": "^2.7.0"
+    "three": "^0.169.0",
+    "tslib": "^2.8.0"
   },
   "sideEffects": false,
   "devDependencies": {
-    "@types/three": "^0.168.0",
+    "@types/three": "^0.169.0",
     "ng-packagr": "^18.2.1"
   }
 }
