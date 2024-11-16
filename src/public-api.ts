@@ -11,5 +11,6 @@ export { default as WMSTileLayerComponent } from "./lib/Modules/AngularMaptalksM
 export { default as AngularMaptalksPanelModule } from "./lib/Modules/AngularMaptalksPanelModule/AngularMaptalksPanelModule";
 export { default as AngularMaptalksModule } from "./lib/Modules/AngularMaptalksModule/AngularMaptalksModule";
 export { default as MapPanelComponent } from "./lib/Modules/AngularMaptalksPanelModule/Components/MapPanelComponent/MapPanelComponent";
+export { default as AngularMaptalksBasePluginComponent } from "./lib/Modules/AngularMaptalksPluginModule/Components/AngularMaptalksBasePluginComponent/AngularMaptalksBasePluginComponent";
 import Model from "maptalks.three/dist/Model";
 export { Model };
