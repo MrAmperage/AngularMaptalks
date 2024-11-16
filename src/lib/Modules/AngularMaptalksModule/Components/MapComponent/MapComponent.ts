@@ -6,7 +6,6 @@ import { MapService } from "../../../../../public-api";
   selector: "MapComponent",
   templateUrl: "./MapComponent.html",
   styleUrls: ["./MapComponent.css"],
-  providers: [MapService],
 })
 /*Основной компонент карты */
 export default class MapComponent implements OnInit {
