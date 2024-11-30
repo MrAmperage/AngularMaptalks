@@ -1,10 +1,15 @@
 import { Injectable } from "@angular/core";
-import { Coordinate } from "maptalks";
+import { Coordinate, Map } from "maptalks";
 import { MapConfiguration } from "./MapServiceTypes";
+import { BasePluginOptions } from "../../../AngularMaptalksPluginModule/Components/AngularMaptalksBasePluginComponent/AngularMaptalksBasePluginComponentType";
 
 @Injectable()
 /*Сервис карты.Все настройки можно задавать отсюда*/
 export default class MapService {
+  /*Объект карты */
+  Map!: Map;
+  /*Геометрии и настройки плагинов */
+  private PluginsOptions: any[] = [];
   /*Центр карты */
   Center!: number[] | Coordinate;
   /*Уровень приближения карты*/
@@ -24,5 +29,9 @@ export default class MapService {
     if (MapConfiguration.BaseTileLayerUrlTemplate !== undefined) {
       this.BaseTileLayerUrlTemplate = MapConfiguration.BaseTileLayerUrlTemplate;
     }
+  }
+  /*Регистрация нового плагина в сервисе */
+  RegisterPlugin(PluginOptions: BasePluginOptions) {
+    this.PluginsOptions.push(PluginOptions);
   }
 }

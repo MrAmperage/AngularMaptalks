@@ -13,4 +13,6 @@ export { default as AngularMaptalksModule } from "./lib/Modules/AngularMaptalksM
 export { default as MapPanelComponent } from "./lib/Modules/AngularMaptalksPanelModule/Components/MapPanelComponent/MapPanelComponent";
 export { default as AngularMaptalksBasePluginComponent } from "./lib/Modules/AngularMaptalksPluginModule/Components/AngularMaptalksBasePluginComponent/AngularMaptalksBasePluginComponent";
 import Model from "maptalks.three/dist/Model";
-export { Model };
+import { ThreeLayer } from "maptalks.three";
+import { MapTool, Layer } from "maptalks";
+export { Model, MapTool, ThreeLayer, Layer };

@@ -27,6 +27,9 @@ export default class MapComponent implements OnInit {
       center: this.GetCenter,
       zoom: this.GetZoom,
     });
+    if (this.MapService !== undefined) {
+      this.MapService.Map = this.MapObject;
+    }
   }
   ngOnInit(): void {
     this.InitMap();

@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core";
+import AngularMaptalksModule from "../AngularMaptalksModule/AngularMaptalksModule";
 
 /*Модуль с компонентами для написания плагинов*/
 @NgModule({
   declarations: [],
-  imports: [],
+  imports: [AngularMaptalksModule],
   exports: [],
   providers: [],
 })
