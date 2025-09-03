@@ -3,5 +3,6 @@
   "dest": "dist/angular-maptalks",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["maptalks"]
 }

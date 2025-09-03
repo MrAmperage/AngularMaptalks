@@ -1,5 +1,2 @@
-/*
- * Public API Surface of angular-maptalks
- */
-
-export * from './lib/angular-maptalks';
+/*Ядро */
+export { default as MapComponent } from "./Modules/AngularMaptalksModule/Core/MapComponent/MapComponent";
