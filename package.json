@@ -8,5 +8,11 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "ng-packagr": "^20.2.0"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  }
 }
