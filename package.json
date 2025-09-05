@@ -2,8 +2,9 @@
   "name": "@mr.amperage/angular-maptalks",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^20.2.0",
-    "@angular/core": "^20.2.0"
+    "@angular/common": "^20.2.4",
+    "@angular/core": "^20.2.4",
+    "ng-zorro-antd": "^20.2.1"
   },
   "dependencies": {
     "maptalks": "^1.4.1",
